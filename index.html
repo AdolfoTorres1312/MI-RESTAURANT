@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MiRestaurante — Landing básica</title>
+
+  <!-- Bootstrap 5 por CDN (solo CSS y JS bundle) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- NAVBAR (simple) -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">MiRestaurante</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav"
+              aria-controls="nav" aria-expanded="false" aria-label="Alternar navegación">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#menu">Menú</a></li>
+          <li class="nav-item"><a class="nav-link" href="#reservas">Reservas</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO (muy básico) -->
+  <header id="inicio" class="hero text-white text-center d-flex align-items-center">
+    <div class="container">
+      <h1 class="display-5 fw-bold">Bienvenid@ a MiRestaurante</h1>
+      <p class="lead">Comida casera preparada con ingredientes frescos.</p>
+      <a class="btn btn-primary" href="#reservas">Reservar</a>
+    </div>
+  </header>
+
+  <!-- MENÚ con cards en columnas (grid Bootstrap) -->
+  <section id="menu" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Menú</h2>
+      <div class="row g-4">
+        <!-- Card 1 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100">
+            <img class="card-img-top" src="ASSETS/Curanto_Chilote_-_Flickr_-_Renzo_Disi.jpg" alt="Plato 1">
+            <div class="card-body">
+              <h5 class="card-title">Plato 1</h5>
+              <p class="card-text">Descripción simple del plato 1.</p>
+              <span class="badge bg-success">$9.990</span>
+            </div>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100">
+            <img class="card-img-top" src="ASSETS/comida-chilena-santiago.jpg" alt="Plato 2">
+            <div class="card-body">
+              <h5 class="card-title">Plato 2</h5>
+              <p class="card-text">Descripción simple del plato 2.</p>
+              <span class="badge bg-success">$8.500</span>
+            </div>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100">
+            <img class="card-img-top" src="ASSETS/IMG/platos-tipicos-chilenos.jpg" alt="Plato 3">
+            <div class="card-body">
+              <h5 class="card-title">Plato 3</h5>
+              <p class="card-text">Descripción simple del plato 3.</p>
+              <span class="badge bg-success">$10.900</span>
+            </div>
+          </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100">
+            <img class="card-img-top" src="ASSETS/IMG/Almejas-a-las-parmesana-1024x682.jpg" alt="Plato 4">
+            <div class="card-body">
+              <h5 class="card-title">Plato 4</h5>
+              <p class="card-text">Descripción simple del plato 4.</p>
+              <span class="badge bg-success">$7.900</span>
+            </div>
+          </div>
+        </div>
+        <!-- Card 5 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100">
+            <img class="card-img-top" src="ASSETS/IMG/chile-comida-1024x682.jpg" alt="Plato 5">
+            <div class="card-body">
+              <h5 class="card-title">Plato 5</h5>
+              <p class="card-text">Descripción simple del plato 5.</p>
+              <span class="badge bg-success">$6.500</span>
+            </div>
+          </div>
+        </div>
+        <!-- Card 6 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100">
+            <img class="card-img-top" src="ASSETS/IMG/Día-de-la-Cocina-Chilena.jpeg" alt="Plato 6">
+            <div class="card-body">
+              <h5 class="card-title">Plato 6</h5>
+              <p class="card-text">Descripción simple del plato 6.</p>
+              <span class="badge bg-success">$5.500</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORMULARIO de reservas (centrado, sin JS avanzado) -->
+  <section id="reservas" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">Reservas</h2>
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-6">
+          <form class="border rounded p-3 bg-white">
+            <div class="mb-3">
+              <label class="form-label" for="nombre">Nombre</label>
+              <input id="nombre" type="text" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label" for="email">Email</label>
+              <input id="email" type="email" class="form-control" required>
+            </div>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label class="form-label" for="fecha">Fecha</label>
+                <input id="fecha" type="date" class="form-control" required>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label class="form-label" for="hora">Hora</label>
+                <input id="hora" type="time" class="form-control" required>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label" for="personas">Personas</label>
+              <select id="personas" class="form-select" required>
+                <option value="" selected disabled>Selecciona...</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6+</option>
+              </select>
+            </div>
+            <div class="d-grid">
+              <button class="btn btn-primary" type="submit">Enviar reserva</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO (texto simple) -->
+  <section id="contacto" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-3">Contacto</h2>
+      <p class="text-center mb-0">Dirección: Calle Falsa 123, Santiago</p>
+      <p class="text-center mb-0">Teléfono: +56 9 1234 5678</p>
+      <p class="text-center">Horario: Lun a Dom — 12:00 a 23:00</p>
+    </div>
+  </section>
+
+  <!-- FOOTER (contraste y enlaces simples) -->
+  <footer class="bg-dark text-light text-center py-3">
+    <div class="container">
+      <small>© 2025 MiRestaurante — 
+        <a class="text-light" href="#" target="_blank" rel="noreferrer">Instagram</a> ·
+        <a class="text-light" href="#" target="_blank" rel="noreferrer">Facebook</a> ·
+        <a class="text-light" href="#" target="_blank" rel="noreferrer">TikTok</a>
+      </small>
+    </div>
+  </footer>
+
+  <!-- JS Bootstrap (necesario para el menú hamburguesa) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

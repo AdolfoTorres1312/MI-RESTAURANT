@@ -1,0 +1,19 @@
+/* Estilos muy básicos para complementar Bootstrap */
+html{ scroll-behavior: smooth; }
+
+/* Compensar la barra fija (altura aprox. navbar) */
+body{ padding-top: 56px; }
+
+/* Hero sencillo con imagen de fondo */
+.hero{
+  min-height: 70vh;
+  background-image: url('https://picsum.photos/1200/800?random=1');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Ajuste simple para que todas las imágenes de cards tengan alto similar */
+.card-img-top{
+  height: 200px;
+  object-fit: cover;
+}
